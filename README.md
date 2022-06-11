@@ -1,6 +1,10 @@
 # Swiper Thumbs Slider
  Fully designed swiper slider with thubms navigation
 
+### Check out Demo here :
+https://irfansadiq030.github.io/Swiper-Thumbs-Slider/
+
+
 <br>
 <br>
 
