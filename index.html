@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+        integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    .swiper1 {
+        width: 100%;
+        height: 80%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-slide {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
+<body>
+
+    <div class="main_container">
+        <!-- Swiper -->
+        <div class="swiper swiper1" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://picsum.photos/1100/900?img=26" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://picsum.photos/1100/900?img=65" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://picsum.photos/1100/900?img=67" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://picsum.photos/1100/900?img=68" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://picsum.photos/1100/900?img=63" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://picsum.photos/1100/900?img=62" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- 2nd Swiper Thumb-->
+        <div class="thumbs_container">
+            <i class="fani_btn_prev fas fa-arrow-circle-left"></i>
+            <div class="swiper swiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://picsum.photos/1100/900?img=26" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://picsum.photos/1100/900?img=65" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://picsum.photos/1100/900?img=67" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://picsum.photos/1100/900?img=68" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://picsum.photos/1100/900?img=63" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://picsum.photos/1100/900?img=62" alt="">
+                    </div>
+                </div>
+            </div>
+            <i class="fani_btn_nxt fas fa-arrow-circle-right"></i>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Designed by: <a target="_blank" href="https://irfansadiq.pk">irfansadiq</a> </p>
+    </div>
+
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper2", {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+
+        });
+
+        var swiper1 = new Swiper(".swiper1", {
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+            navigation: {
+                nextEl: ".fani_btn_nxt",
+                prevEl: ".fani_btn_prev"
+            },
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>
